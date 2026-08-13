@@ -1,4 +1,35 @@
-.nav {
+@font-face {
+    font-family: 'Amiri';
+    src: url('fonts/Amiri-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Amiri';
+    src: url('fonts/Amiri-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amiri';
+    src: url('fonts/Amiri-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Amiri';
+    src: url('fonts/Amiri-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+.amiri-text {
+    font-family:'Amiri', 'Times New Roman', Times, serif
+}
+
+
+/* .nav {
     background-color: #fbcf7e;
     padding: 10px 20px;
 }
@@ -11,9 +42,8 @@
     gap: 20px;
 }
 
-/* Style individual links */
 .nav ul a {
-    text-decoration: none;  /* Removes underline */
+    text-decoration: none; 
     color: #fff;
     font-family: sans-serif;
     font-size: 16px;
@@ -21,7 +51,6 @@
     transition: background-color 0.3s ease;
 }
 
-/* Hover indicator effect */
 .nav ul a:hover {
     background-color: #555;
     border-radius: 4px;
@@ -31,4 +60,4 @@
     max-width: 100%;
     height: auto;
     display: block;
-}
+} */
