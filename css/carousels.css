@@ -1,0 +1,21 @@
+.content img {
+    border: 1px solid #000000;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 3;
+    object-fit: cover;
+}
+
+.ministry {
+    display: flex;
+    flex-direction: column;
+}
+
+.ministry-text {
+    margin: 40px 0 40px auto;
+    flex: 1;
+}
+
+.ministry-text p {
+    text-align: justify;
+}

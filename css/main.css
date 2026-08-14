@@ -108,11 +108,11 @@ body {
     box-shadow: -10px 10px 10px 2px rgba(10, 10, 10, 0.5);
 }
 
-.content h3, .content strong {
+.content h3, .content h4, .content h5, .content h6, .content strong {
     font-family: 'Amiri', 'Times New Roman', Times, serif;
 }
 
-.content h3 {
+.content h3, .content h4, .content h5, .content h6 {
     font-style: italic;
     font-weight: bold;
 }
