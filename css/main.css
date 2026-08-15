@@ -25,7 +25,7 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #f4e7cc, #faeed4);
+    background-image: linear-gradient(to right, /*#f4e7cc*/ #f2d7a0, #faeed4);
     background-attachment: fixed;
     min-width: 100vw;
 }
@@ -87,7 +87,13 @@ body {
     text-decoration: none;
     color: #fff;
     font-family: 'Amiri', 'Times New Roman', Times, serif;
+    font-size: 20pt;
     padding: 8px 12px;
+}
+
+.active-page {
+    font-weight: bold;
+    background-color:rgb(201, 60, 60)
 }
 
 .nav ul a:hover {
@@ -121,11 +127,29 @@ body {
     text-align: center;
     align-items: center;
     font-family: 'Amiri', 'Times New Roman', Times, serif;
+    font-size: 14pt;
 }
 
 .content img {
     padding: auto;
     border: 1px solid black;
+}
+
+.content p {
+    font-size: 14pt;
+}
+
+.content p strong {
+    color: rgb(143, 24, 24);
+}
+
+.content a {
+    font-style: italic;
+}
+
+.content a:hover {
+    font-family: 'Amiri', 'Times New Roman', Times, serif;
+    font-size: 15pt;
 }
 
 .footer {
