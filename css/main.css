@@ -41,6 +41,7 @@ body {
     align-items: center;
     font-family: 'Amiri', 'Times New Roman', Times, serif;
     color: rgb(143, 24, 24);
+    padding: 1em 0 1em;
 }
 
 #logo {
@@ -119,7 +120,6 @@ body {
 }
 
 .content h3, .content h4, .content h5, .content h6 {
-    font-style: italic;
     font-weight: bold;
 }
 

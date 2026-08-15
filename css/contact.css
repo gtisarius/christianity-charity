@@ -1,0 +1,80 @@
+#contactInfo {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    row-gap: 0.75rem;
+    column-gap: 0.75rem;
+    align-items: center;
+    max-width: 500px;
+}
+
+#contactInfo label {
+    grid-column: 1;
+    text-align: right;
+    font-weight: bold;
+    font-family: 'Amiri', 'Times New Roman', Times, serif;
+    color: rgb(143, 24, 24);
+}
+
+#contactInfo input,
+#contactInfo select,
+#contactInfo textarea {
+    grid-column: 2;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contactInfo br {
+    display: none;
+}
+
+#contactInfo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#contactInfo label[for="message"] {
+    align-self: start;
+    padding-top: 0.4rem;
+}
+
+/* Submit / reset buttons: skip the label column, span both */
+#contactInfo input[type="submit"],
+#contactInfo input[type="reset"] {
+    grid-column: 2;
+    width: auto;
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    font-family: 'Amiri', 'Times New Roman', Times, serif;
+}
+
+#contactInfo input[type="submit"] {
+    background-color: rgb(143, 24, 24);
+    color: #fff;
+    border: none;
+}
+
+#contactInfo input[type="reset"] {
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+/* Mobile: stack label above field */
+@media (max-width: 576px) {
+    #contactInfo {
+        grid-template-columns: 1fr;
+    }
+    #contactInfo label {
+        text-align: left;
+        grid-column: 1;
+    }
+    #contactInfo input,
+    #contactInfo select,
+    #contactInfo textarea {
+        grid-column: 1;
+    }
+}
