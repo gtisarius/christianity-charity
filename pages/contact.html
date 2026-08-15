@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/main.css">
-    <script src="https://googleapis.com"></script>
+    <!-- <script src="https://googleapis.com"></script> -->
     <title>Contact Us</title>
 </head>
 <body>
@@ -56,24 +56,28 @@
                 <p>We are young Catholic men dedicated to establishing the social Kingship of Jesus Christ. We reject the modernist heresy, and are committed to living Christian charity for the greater glory of God and the salvation of souls.</p>
                 <p>We believe our faith is a gift from God, one we are called to share with <i>all</i> people by living it through charity.</p>
                 <p>For this purpose we seek to grow in virtue and set a good example to ourselves and the world, and embrace <a href="pages/catholic_action">Catholic Action</a> as the necessary remedy for our troubled times.</p>
-                <form id="contactInfo" action="mailto:info@brothersofchristking.org" method="POST" enctype="text/plain">
-                    <label for="fname">First Name: </label>
-                    <input type="text" name="fname" pattern="[A-Za-z]+" required><br/>
-                    <label for="lname">Last Name: </label>
-                    <input type="text" name="lname" pattern="[A-Za-z]+" required><br/>
+                <form id="contactInfo" action="https://formspree.io/f/xljrwbva" method="POST">
+                    <label for="fullname">First name: </label>
+                    <input type="text" name="firstname" pattern="[A-Za-z]+" required><br/>
+                    <label for="fullname">Last name: </label>
+                    <input type="text" name="lastname" pattern="[A-Za-z]+" required><br/>
                     <label for="email">Email: </label>
                     <input type="text" name="email" required><br/>
                     <label for="phone">Phone Number (optional): </label>
                     <input type="tel" name="phone"><br/>
-                    <label for="search">Start typing your town:</label>
-                    <input type="text" id="search" placeholder="Type town name...">
-
-                    <!-- Target inputs to automatically fill -->
                     <label for="town">Town / City:</label>
-                    <input type="text" id="town" name="town" readonly>
+                    <input type="text" id="town" name="town" autocomplete="address-level2" placeholder="Cincinatti" required>
                     <label for="state">State:</label>
-                    <input type="text" id="state" name="state" readonly>
-                    <label for="message">Message: </label><br/>
+                    <input type="text" id="state" name="state" autocomplete="address-level1" placeholder="OH" maxlength="2" required>
+                    <label for="interest">Interest:</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">-- Please choose an option --</option>
+                        <option value="new-chapter">Help found a new chapter</option>
+                        <option value="join-chapter">Join a chapter</option>
+                        <option value="support-us">Support us</option>
+                        <option value="other">Other queries</option>
+                    </select>
+                    <label for="message">Tell us more about yourself: </label><br/>
                     <textarea cols="30" rows="10" name="message"></textarea><br><br>
                     <input type="submit" value="Submit">
                     <br>
@@ -87,7 +91,7 @@
         </div>
     </div>
 </body>
-<script>
+<!-- <script>
     function initAutocomplete() {
         const input = document.getElementById('search');
         // Restrict the search results to just cities/towns
@@ -114,6 +118,6 @@
         });
     }
     google.maps.event.addDomListener(window, 'load', initAutocomplete);
-</script>
+</script> -->
 
 </html>
