@@ -123,11 +123,19 @@ body {
     font-weight: bold;
 }
 
+.content h5 {
+    padding-bottom: 1em;
+}
+
 .aside {
     text-align: center;
     align-items: center;
     font-family: 'Amiri', 'Times New Roman', Times, serif;
     font-size: 14pt;
+}
+
+.aside p {
+    padding-top: 1.5em;
 }
 
 .content img {
