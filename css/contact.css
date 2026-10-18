@@ -26,10 +26,6 @@
     border-radius: 4px;
 }
 
-#contactInfo br {
-    display: none;
-}
-
 #contactInfo textarea {
     resize: vertical;
     min-height: 120px;
@@ -40,16 +36,20 @@
     padding-top: 0.4rem;
 }
 
-/* Submit / reset buttons: skip the label column, span both */
+/* Button container rules for desktop */
+.form-buttons {
+    grid-column: 2;
+    display: flex;
+    gap: 0.5rem;
+}
+
 #contactInfo input[type="submit"],
 #contactInfo input[type="reset"] {
-    grid-column: 2;
     width: auto;
-    display: inline-block;
-    margin-right: 0.5rem;
     padding: 0.5rem 1.25rem;
     cursor: pointer;
     font-family: 'Amiri', 'Times New Roman', Times, serif;
+    border-radius: 4px;
 }
 
 #contactInfo input[type="submit"] {
@@ -63,18 +63,33 @@
     border: 1px solid #ccc;
 }
 
-/* Mobile: stack label above field */
+/* Mobile Viewport Width: stack elements vertically */
 @media (max-width: 576px) {
     #contactInfo {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Switch grid to single column */
+        row-gap: 0.5rem;
     }
+    
     #contactInfo label {
         text-align: left;
         grid-column: 1;
+        padding-top: 0.25rem;
     }
+    
     #contactInfo input,
     #contactInfo select,
-    #contactInfo textarea {
-        grid-column: 1;
+    #contactInfo textarea,
+    .form-buttons {
+        grid-column: 1; /* Force all fields and buttons to take full width */
+    }
+
+    .form-buttons {
+        margin-top: 0.5rem;
+    }
+
+    #contactInfo input[type="submit"],
+    #contactInfo input[type="reset"] {
+        flex: 1; /* Make buttons balance split equally across screen width on mobile */
+        text-align: center;
     }
 }
